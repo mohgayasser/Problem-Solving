@@ -1,4 +1,4 @@
-```c++
+
 vector<int> reverseArray(vector<int> a) {
     
     vector<int> r;
@@ -9,4 +9,4 @@ vector<int> reverseArray(vector<int> a) {
     
     return r;
 }
-```
+

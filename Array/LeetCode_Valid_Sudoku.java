@@ -12,23 +12,20 @@ class Solution {
                     hash_Seth.add((int)(board[i][j]));
                     counterh++;
                 }
-            }
-            if(hash_Seth.size()!=counterh)return false;
-            hash_Seth.clear();
-           
-            counterh=0;
-        }
-         for(int i=0;i<9;i++){
-            for(int j=0;j<9;j++){
-                  if(Character.compare(board[j][i],'.')!=0){
+                if(Character.compare(board[j][i],'.')!=0){
                     hash_Setv.add((int)(board[j][i]));
                     counterv++;
                 }
+              
             }
-            if(hash_Setv.size()!=counterv)return false;
+            if(hash_Seth.size()<counterh)return false;
+            hash_Seth.clear();
+            counterh=0;
+             if(hash_Setv.size()!=counterv)return false;
             hash_Setv.clear();
             counterv=0;
-        }int j=0,k=0,first=0,cell;
+        }
+        int j=0,k=0,first=0,cell;
         for(int i=0;i<9;){
             first=0;
             cell=i;
@@ -57,3 +54,4 @@ class Solution {
        return true;
     }
 }
+Console
